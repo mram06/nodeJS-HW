@@ -7,18 +7,20 @@
   </head>
   <body>
     <h1><%= title %></h1>
-    <label>
-      Назва товару
-      <input type="text" />
-    </label>
-    <label>
-      Категорія
-      <input type="text" />
-    </label>
-    <label>
-      Ціна
-      <input type="number" />
-    </label>
-    <button>Додати</button>
+    <form action="/products" method="POST">
+      <label>
+        Назва товару
+        <input type="text" name="name" />
+      </label>
+      <label>
+        Категорія
+        <input type="text" name="category" />
+      </label>
+      <label>
+        Ціна
+        <input type="number" name="price" />
+      </label>
+      <button type="submit">Додати</button>
+    </form>
   </body>
 </html>

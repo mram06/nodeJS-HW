@@ -1,10 +1,7 @@
 import { Router } from "express";
 const router = Router();
+import MainController from "../controllers/mainController.mjs";
 
-router.get("/", (req, res) => {
-  res.render("index", {
-    title: "Головна сторінка",
-  });
-});
+router.get("/", MainController.index);
 
 export default router;
